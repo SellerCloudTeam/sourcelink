@@ -27,7 +27,7 @@ namespace Microsoft.Build.Tasks.Tfvc
         ///   RevisionId: Revision (changeset number).
         /// </summary>
         [Output]
-        public ITaskItem[]? Mapping { get; private set; }
+        public ITaskItem[]? Roots { get; private set; }
 
         protected override bool Execute(WorkspaceInfo workspaceInfo)
         {
@@ -55,7 +55,12 @@ namespace Microsoft.Build.Tasks.Tfvc
 
                     // SourceLink.AzureRepos will map each source root to:
                     // {RepositoryUrl}/_versionControl?path={ServerPath}&version={RevisionId}
-                    var item = new TaskItem(folder.LocalItem);
+
+                    // SourceRoot paths are required to end with a slash or backslash
+                    var sourceRoot = folder.LocalItem.EndsWithSeparator()
+                        ? folder.LocalItem
+                        : $"{folder.LocalItem}{Path.DirectorySeparatorChar}";
+                    var item = new TaskItem(sourceRoot);
                     item.SetMetadata("SourceControl", "tfvc");
                     item.SetMetadata("CollectionUrl", collectionUrl);
                     item.SetMetadata("ProjectId", projectId);
@@ -65,7 +70,7 @@ namespace Microsoft.Build.Tasks.Tfvc
                 }
             }
 
-            Mapping = result.ToArray();
+            Roots = result.ToArray();
             return true;
         }
     }
