@@ -72,7 +72,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnet-sourcelink", "src\do
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Build.Tasks.Tfvc.UnitTests", "src\Microsoft.Build.Tasks.Tfvc.UnitTests\Microsoft.Build.Tasks.Tfvc.UnitTests.csproj", "{2518F527-A95B-48D3-BAE3-16D6D301CBC9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SourceLink.AzureRepos.Tfvc.UnitTests", "src\SourceLink.AzureRepos.Tfvc.UnitTests\SourceLink.AzureRepos.Tfvc.UnitTests.csproj", "{0DCFF949-D913-4CA2-8084-1224965FB19F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.SourceLink.AzureRepos.Tfvc.UnitTests", "src\SourceLink.AzureRepos.Tfvc.UnitTests\Microsoft.SourceLink.AzureRepos.Tfvc.UnitTests.csproj", "{0DCFF949-D913-4CA2-8084-1224965FB19F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
