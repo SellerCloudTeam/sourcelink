@@ -23,6 +23,7 @@ namespace Microsoft.Build.Tasks.Tfvc
         ///   Identity: Directory.
         ///   CollectionUrl: Collection URL.
         ///   ProjectId: Project GUID.
+        ///   ProjectName: Project Name.
         ///   RelativeUrl: Relative URL within the project.
         ///   RevisionId: Revision (changeset number).
         /// </summary>
@@ -53,6 +54,8 @@ namespace Microsoft.Build.Tasks.Tfvc
                     // Extract GUID from ArtifactUri "vstfs:///Classification/TeamProject/{Guid}":
                     var projectId = Path.GetFileName(project.ArtifactUri.GetPath());
 
+                    var projectName = project.Name;
+
                     // SourceLink.AzureRepos will map each source root to:
                     // {RepositoryUrl}/_versionControl?path={ServerPath}&version={RevisionId}
 
@@ -64,6 +67,7 @@ namespace Microsoft.Build.Tasks.Tfvc
                     item.SetMetadata("SourceControl", "tfvc");
                     item.SetMetadata("CollectionUrl", collectionUrl);
                     item.SetMetadata("ProjectId", projectId);
+                    item.SetMetadata("ProjectName", projectName);
                     item.SetMetadata("ServerPath", folder.ServerItem);
                     item.SetMetadata("RevisionId", changesetId);
                     result.Add(item);

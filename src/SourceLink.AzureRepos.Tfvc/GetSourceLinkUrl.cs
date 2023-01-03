@@ -43,6 +43,13 @@ namespace Microsoft.SourceLink.AzureRepos.Tfvc
                 return false;
             }
 
+            var projectName = SourceRoot.GetMetadata("ProjectName");
+            if (projectName == null || string.IsNullOrWhiteSpace(projectName))
+            {
+                Log.LogError($"SourceRoot.ProjectName of '{SourceRoot.ItemSpec}' is invalid: '{projectName}'");
+                return false;
+            }
+
             string revisionIdStr = SourceRoot.GetMetadata("RevisionId");
             if (revisionIdStr == null || !uint.TryParse(revisionIdStr, out var revisionId))
             {
@@ -57,10 +64,10 @@ namespace Microsoft.SourceLink.AzureRepos.Tfvc
                 return false;
             }
 
+            var escapedProjectName = Uri.EscapeDataString(projectName);
             var escapedServerPath = string.Join("/", serverPath.Split('/').Select(Uri.EscapeDataString));
 
-            SourceLinkUrl = new Uri(collectionUri, projectId.ToString("D")).ToString() + 
-                "/_versionControl?version=" + revisionId + "&path="+ escapedServerPath + "/*";
+            SourceLinkUrl = $"{collectionUrl.TrimEnd('/')}/{escapedProjectName}/_api/_versioncontrol/itemContent?contentOnly=true&version=" + revisionId + "&path=" + escapedServerPath + "/*";
 
             return true;
         }

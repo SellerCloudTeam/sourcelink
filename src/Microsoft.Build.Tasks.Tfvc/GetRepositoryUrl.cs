@@ -26,10 +26,10 @@ namespace Microsoft.Build.Tasks.Tfvc
             // Use the first project:
             var project = workspace.GetTeamProjectForLocalPath(workspaceInfo.MappedPaths.First());
 
-            // Extract GUID from ArtifactUri "vstfs:///Classification/TeamProject/{Guid}":
-            var projectId = Path.GetFileName(project.ArtifactUri.GetPath());
+            // Extract project name:
+            var projectName = project.Name;
 
-            Url = collection.Uri.ToString() + "/" + projectId;
+            Url = collection.Uri.ToString() + "/" + Uri.EscapeDataString(projectName);
 
             return true;
         }
