@@ -29,7 +29,14 @@ namespace Microsoft.Build.Tasks.Tfvc
             // Extract GUID from ArtifactUri "vstfs:///Classification/TeamProject/{Guid}":
             var projectId = Path.GetFileName(project.ArtifactUri.GetPath());
 
-            Url = collection.Uri.ToString() + "/" + projectId;
+            // Extract project name:
+            var projectName = project.Name;
+
+            // NOTE: TFS / AzureDevOpsServer
+            Url = collection.Uri.ToString() + "/" + Uri.EscapeDataString(projectName);
+
+            // NOTE: Original URL - AzureRepos?
+            // Url = collection.Uri.ToString() + "/" + projectId;
 
             return true;
         }

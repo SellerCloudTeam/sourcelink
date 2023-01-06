@@ -32,6 +32,7 @@ The following Source Link packages have been released by Microsoft:
 
 In addition an experimental package is available for TFVC server:
 - Microsoft.SourceLink.AzureRepos.Tfvc (depends on experimental Microsoft.Build.Tasks.Tfvc package)
+- Microsoft.SourceLink.AzureDevOpsServer.Tfvc (depends on experimental Microsoft.Build.Tasks.Tfvc package)
 
 The system is extensible and custom packages that handle other source control providers can be developed and used. See [Custom Source Link packages](#creating-custom-source-link-packages) for details.
 
