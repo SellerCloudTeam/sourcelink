@@ -1,9 +1,8 @@
-﻿using Microsoft.Build.Tasks.Tfvc;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 
-namespace Microsoft.Build.Tasks.Git.UnitTests
+namespace Microsoft.Build.Tasks.Tfvc.IntegrationTests
 {
     public class TfvcTasksTests
     {
