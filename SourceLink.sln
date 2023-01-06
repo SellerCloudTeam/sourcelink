@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.SourceLink.GitHub
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.SourceLink.AzureRepos.Git", "src\SourceLink.AzureRepos.Git\Microsoft.SourceLink.AzureRepos.Git.csproj", "{076D322B-A705-4C57-A5A0-39C81BCFC285}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.SourceLink.AzureRepos.Tfvc", "src\SourceLink.AzureRepos.Tfvc\Microsoft.SourceLink.AzureRepos.Tfvc.csproj", "{DA058284-2FBD-459C-B9F3-82B5F7713C6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.SourceLink.AzureDevOpsServer.Tfvc", "src\SourceLink.AzureDevOpsServer.Tfvc\Microsoft.SourceLink.AzureDevOpsServer.Tfvc.csproj", "{DA058284-2FBD-459C-B9F3-82B5F7713C6F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestUtilities", "src\TestUtilities\TestUtilities.csproj", "{D6ED6730-02A8-4B21-8D62-C7B2009F53A5}"
 EndProject
@@ -70,9 +70,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.SourceLink.Gitea.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnet-sourcelink", "src\dotnet-sourcelink\dotnet-sourcelink.csproj", "{4376B613-CD5B-4274-9071-30989769B0B2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Build.Tasks.Tfvc.UnitTests", "src\Microsoft.Build.Tasks.Tfvc.UnitTests\Microsoft.Build.Tasks.Tfvc.UnitTests.csproj", "{2518F527-A95B-48D3-BAE3-16D6D301CBC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Build.Tasks.Tfvc.IntegrationTests", "src\Microsoft.Build.Tasks.Tfvc.IntegrationTests\Microsoft.Build.Tasks.Tfvc.IntegrationTests.csproj", "{2518F527-A95B-48D3-BAE3-16D6D301CBC9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.SourceLink.AzureRepos.Tfvc.UnitTests", "src\SourceLink.AzureRepos.Tfvc.UnitTests\Microsoft.SourceLink.AzureRepos.Tfvc.UnitTests.csproj", "{0DCFF949-D913-4CA2-8084-1224965FB19F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.SourceLink.AzureDevOpsServer.Tfvc.UnitTests", "src\SourceLink.AzureDevOpsServer.Tfvc.UnitTests\Microsoft.SourceLink.AzureDevOpsServer.Tfvc.UnitTests.csproj", "{0DCFF949-D913-4CA2-8084-1224965FB19F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

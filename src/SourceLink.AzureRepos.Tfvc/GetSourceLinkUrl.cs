@@ -9,7 +9,7 @@ using System.Linq;
 using Microsoft.Build.Framework;
 using Microsoft.Build.Utilities;
 
-namespace Microsoft.SourceLink.AzureRepos.Tfvc
+namespace Microsoft.SourceLink.AzureDevOpsServer.Tfvc
 {
     public sealed class GetSourceLinkUrl : Task
     {

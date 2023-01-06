@@ -1,11 +1,10 @@
-﻿using Microsoft.SourceLink.AzureRepos.Tfvc;
-using System;
+﻿using System;
 using System.Linq;
 using TestUtilities;
 using Xunit;
 using static TestUtilities.KeyValuePairUtils;
 
-namespace Microsoft.SourceLink.AzureRepos.Git.UnitTests
+namespace Microsoft.SourceLink.AzureDevOpsServer.Tfvc.UnitTests
 {
     public class GetSourceLinkUrlTests
     {
