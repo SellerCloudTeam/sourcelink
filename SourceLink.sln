@@ -74,6 +74,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Build.Tasks.Tfvc.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.SourceLink.AzureDevOpsServer.Tfvc.UnitTests", "src\SourceLink.AzureDevOpsServer.Tfvc.UnitTests\Microsoft.SourceLink.AzureDevOpsServer.Tfvc.UnitTests.csproj", "{0DCFF949-D913-4CA2-8084-1224965FB19F}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.SourceLink.AzureRepos.Tfvc", "src\SourceLink.AzureRepos.Tfvc\Microsoft.SourceLink.AzureRepos.Tfvc.csproj", "{811EDFEE-EA9F-42A1-A6F7-87EB35950798}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -192,6 +194,10 @@ Global
 		{0DCFF949-D913-4CA2-8084-1224965FB19F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DCFF949-D913-4CA2-8084-1224965FB19F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DCFF949-D913-4CA2-8084-1224965FB19F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{811EDFEE-EA9F-42A1-A6F7-87EB35950798}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{811EDFEE-EA9F-42A1-A6F7-87EB35950798}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{811EDFEE-EA9F-42A1-A6F7-87EB35950798}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{811EDFEE-EA9F-42A1-A6F7-87EB35950798}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
