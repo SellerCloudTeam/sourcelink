@@ -41,7 +41,8 @@ namespace Microsoft.Build.Tasks.Tfvc
 #endif
         public override bool Execute()
         {
-            Workstation.CacheEnabled = TfsCollectionUrl == null;
+            // If TfsCollectionUrl is specified, do not use any local, ambient TFS cache
+            Workstation.CacheEnabled = string.IsNullOrWhiteSpace(TfsCollectionUrl);
 
             var workstation = Workstation.Current;
             var computer = workstation.Name;

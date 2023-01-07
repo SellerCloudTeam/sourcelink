@@ -76,6 +76,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.SourceLink.AzureD
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.SourceLink.AzureRepos.Tfvc", "src\SourceLink.AzureRepos.Tfvc\Microsoft.SourceLink.AzureRepos.Tfvc.csproj", "{811EDFEE-EA9F-42A1-A6F7-87EB35950798}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sourcelink-tfvc-test", "src\sourcelink-tfvc-test\sourcelink-tfvc-test.csproj", "{F0CAAD95-0EE9-4FEB-984C-796D95866437}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -198,6 +200,10 @@ Global
 		{811EDFEE-EA9F-42A1-A6F7-87EB35950798}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{811EDFEE-EA9F-42A1-A6F7-87EB35950798}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{811EDFEE-EA9F-42A1-A6F7-87EB35950798}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0CAAD95-0EE9-4FEB-984C-796D95866437}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0CAAD95-0EE9-4FEB-984C-796D95866437}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0CAAD95-0EE9-4FEB-984C-796D95866437}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0CAAD95-0EE9-4FEB-984C-796D95866437}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
