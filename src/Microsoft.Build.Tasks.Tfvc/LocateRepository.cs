@@ -2,8 +2,10 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the License.txt file in the project root for more information.
 
+using System;
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.Build.Framework;
+using Microsoft.Build.Tasks.Tfvc.Extensions;
 using Microsoft.Build.Utilities;
 using Microsoft.TeamFoundation.VersionControl.Client;
 
@@ -13,6 +15,8 @@ namespace Microsoft.Build.Tasks.Tfvc
     {
         [Required, NotNull]
         public string? Directory { get; set; }
+
+        public string? TfsCollectionUrl { get; set; }
 
         [Output]
         public string? Id { get; set; }
@@ -36,16 +40,28 @@ namespace Microsoft.Build.Tasks.Tfvc
         }
 #endif
         public override bool Execute()
-        {            
-            var workspaceInfo = Workstation.Current.GetLocalWorkspaceInfo(Directory);
+        {
+            Workstation.CacheEnabled = TfsCollectionUrl == null;
+
+            var workstation = Workstation.Current;
+            var computer = workstation.Name;
+
+            var checkWorkspaceInfo = workstation.GetLocalWorkspaceInfo(Directory);
+
+            if (checkWorkspaceInfo == null && TfsCollectionUrl != null)
+            {
+                checkWorkspaceInfo = workstation.TryGetLocalWorkspaceInfoFromServer(new Uri(TfsCollectionUrl), computer, Directory);
+            }
+
+            var workspaceInfo = workstation.GetLocalWorkspaceInfo(Directory);
             if (workspaceInfo == null || workspaceInfo.MappedPaths.Length == 0)
             {
-                Log.LogError($"Unable to locate repository containing directory '{Directory}'.");
+                Log.LogError($"Unable to locate repository containing directory '{Directory}' on machine {computer}.");
                 return false;
             }
 
             var paths = workspaceInfo.MappedPaths;
-           
+
             // any mapping works as an id:
             Id = paths[0];
 

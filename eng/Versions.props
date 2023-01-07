@@ -3,7 +3,7 @@
 <Project>
   <PropertyGroup>
     <!-- This repo version -->
-    <VersionPrefix>1.2.0.4</VersionPrefix>
+    <VersionPrefix>1.2.0.5</VersionPrefix>
     <PreReleaseVersionLabel>beta</PreReleaseVersionLabel>
     <SemanticVersioningV1>true</SemanticVersioningV1>
     <!-- Opt-in repo features -->
@@ -11,7 +11,7 @@
     <UsingToolSymbolUploader>true</UsingToolSymbolUploader>
     <MicrosoftBuildVersion>16.7.0</MicrosoftBuildVersion>
     <MicrosoftBuildTasksCore>16.7.0</MicrosoftBuildTasksCore>
-    <MicrosoftTeamFoundationServerExtendedClientVersion>16.170.0</MicrosoftTeamFoundationServerExtendedClientVersion> <!-- v16.170.0 is compatible with TFS 2013 -->
+    <MicrosoftTeamFoundationServerExtendedClientVersion>16.206.0-preview</MicrosoftTeamFoundationServerExtendedClientVersion> <!-- v16.170.0 is compatible with TFS 2013 -->
     <MicrosoftDotNetPlatformAbstractionsVersion>3.1.6</MicrosoftDotNetPlatformAbstractionsVersion>
     <NuGetVersioningVersion>5.7.0</NuGetVersioningVersion>
     <NuGetPackagingVersion>5.7.0</NuGetPackagingVersion>
