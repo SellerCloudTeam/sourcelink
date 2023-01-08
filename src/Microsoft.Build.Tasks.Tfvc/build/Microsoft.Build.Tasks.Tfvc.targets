@@ -14,7 +14,7 @@
       
       Reports and error if the given project doesn't belong to a repository under source control.
     -->
-    <Microsoft.Build.Tasks.Tfvc.LocateRepository Directory="$(MSBuildProjectDirectory)" >
+    <Microsoft.Build.Tasks.Tfvc.LocateRepository Directory="$(MSBuildProjectDirectory)" TfsCollectionUrl="$(TfsCollectionUrl)" >
       <Output TaskParameter="Id" PropertyName="_TfvcWorkspaceDirectory" />
     </Microsoft.Build.Tasks.Tfvc.LocateRepository>
 

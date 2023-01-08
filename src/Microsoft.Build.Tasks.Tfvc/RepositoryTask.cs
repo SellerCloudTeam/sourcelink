@@ -18,10 +18,13 @@ namespace Microsoft.Build.Tasks.Tfvc
 
         public sealed override bool Execute()
         {
-            var workspaceInfo = Workstation.Current.GetLocalWorkspaceInfo(WorkspaceDirectory);
+            var workstation = Workstation.Current;
+            var computer = workstation.Name;
+
+            var workspaceInfo = workstation.GetLocalWorkspaceInfo(WorkspaceDirectory);
             if (workspaceInfo == null)
             {
-                Log.LogError($"Invalid repository id: {WorkspaceDirectory}");
+                Log.LogError($"Invalid repository id '{WorkspaceDirectory}' on machine {computer}.");
                 return false;
             }
 
